@@ -1,0 +1,37 @@
+o que precisamos?
+
+holerite tem que relacionar funcionario com cargo para
+a gente pegar dados de salario e comissao
+
+de onde virão as faltas?
+
+o que aparece na holerite modelo:
+
+dados_empresa = (
+    'Empresa XPTO Alimentos',
+    'Endereço: Rua XV de Novembro, 15, Centro',
+    'CNPJ: 12.345.678/0001-00',
+    'Recibo de Pagamento de Salário',
+    'Mês de referência: Abril/2022'
+)
+
+dados_funcionario:
+    Matricula (funcionario.matricula)
+    Nome do funcionario (funcionario.nome)
+    Data de admissao (funcionario.data_admissao)
+    funcao (cargo.descricao)
+
+Tabela( codigo, descricao, referencia, proventos, descontos)
+    codigo = (101, 203, 303, 973, 978),
+    descricao = ("salario base", "comissao", "faltas", "inss folha", "irrf folha"),
+    referencia = (22.5, cargo.comissao, faltas, contribuicao_inss, contribuicao_irrf),
+    proventos = (salario_base, valor_comissao),
+    descontos = (faltas, inss_folha, iirf_folha)
+
+salario_base
+base_inss = soma dos vencimentos
+base_irrf = soma dos vencimentos - contribuicao_inss
+base_ftgs = soma dos vencimentos
+total de vencimentos = soma proventos
+total descontos = soma dos descontos
+liquido a receber = total vencimentos - total descontos
