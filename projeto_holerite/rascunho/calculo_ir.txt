@@ -1,8 +1,0 @@
-Lógica do excel
-
-SE(expressao_logica; valor_se_verdadeiro; valor_se_falso)
-
-=SE((salario)<1903,99;0;
-    SE((salario)<2826,66;(salario)*7,5%-142,8;
-        SE((salario)<3751,05;(salario)*15%-354,8;
-            SE((salario)<4664,68;(salario)*22,5%-636,13;(salario)*27,5%-869,36))))
